@@ -6,7 +6,7 @@ def Email(sender,password,receiver,msg_body):
     msg = EmailMessage()
     msg['subject'] = input("Subject : ")   
     msg['from'] = sender
-    msg['to'] = reciever
+    msg['to'] = receiver
     msg.set_content(msg_body)
     
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
